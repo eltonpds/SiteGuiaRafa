@@ -1,5 +1,5 @@
 #background-image {
-    background-image: url('imagens/originais/rafa-buique.jpg');
+    background-image: url('../imagens/originais/rafa-buique.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
