@@ -1,5 +1,5 @@
 $(document).ready(function() {    
-    if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) === false) {
         $(window).scroll( function(){   
             $('.hideme').each( function(i){            
                 var bottom_of_object = $(this).offset().top + $(this).outerHeight();
@@ -13,7 +13,7 @@ $(document).ready(function() {
         });  
       } 
       else {
-        $('.hideme').animate({'opacity':'1'},0);
+        $('.hideme').fadeTo(1000, 1);
       }
 });
 
