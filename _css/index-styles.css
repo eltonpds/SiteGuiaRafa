@@ -17,6 +17,10 @@ article {
     color: azure;
 }
 
+.hideme {
+    opacity: 0;
+}
+
 .margens {
     padding-top: 30px;
     padding-bottom: 30px;
