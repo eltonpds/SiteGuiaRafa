@@ -1,9 +1,8 @@
 $(document).ready(function() {    
     if(navigator.userAgent.match(/Android/i) === false
         || navigator.userAgent.match(/webOS/i) === false
-    || navigator.userAgent.match(/AppleWebKit/i) === false
-    || navigator.userAgent.match(/Chrome/i) === false
-    || navigator.userAgent.match(/Mobile Safari/i) === false
+        || navigator.userAgent.match(/AppleWebKit/i) === false
+        || navigator.userAgent.match(/Mobile Safari/i) === false
         || navigator.userAgent.match(/iPhone/i) === false
         || navigator.userAgent.match(/iPad/i) === false
         || navigator.userAgent.match(/iPod/i) === false
