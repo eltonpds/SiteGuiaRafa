@@ -18,8 +18,7 @@ $(document).ready(function() {
       else  if (navigator.userAgent.match(/Windows/i) === null 
       && navigator.userAgent.match(/Android/i)
       || navigator.userAgent.match(/Nexus/i)) {
-        $('.hideme').fadeIn();
-        $('.tile').fadeIn();     
+        $('.hideme').fadeIn();    
         loadMosaic();   
       }
 });
