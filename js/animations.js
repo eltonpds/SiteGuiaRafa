@@ -9,9 +9,9 @@ $(document).ready(function() {
 
             if( bottom_of_window > bottom_of_object ){ 
                 $(this).fadeIn(2000);   
+                loadMosaic();
               }  
 
-              loadMosaic();
         });     
         });  
       } 
@@ -25,13 +25,13 @@ $(document).ready(function() {
 
 function loadMosaic() {
   $('.tile').each( function(i) {
-    $('#img1').delay(2000).fadeIn(1000);
-    $('#img2').delay(2200).fadeIn(1000);
-    $('#img3').delay(2300).fadeIn(1000);
-    $('#img4').delay(2400).fadeIn(1000);
-    $('#img5').delay(2500).fadeIn(1000);
-    $('#img6').delay(2600).fadeIn(1000);
-    $('#img7').delay(2700).fadeIn(1000);
-    $('#img8').delay(2800).fadeIn(1000);
+    $('#img1').delay(1500).fadeIn(1000);
+    $('#img2').delay(1700).fadeIn(1000);
+    $('#img3').delay(1900).fadeIn(1000);
+    $('#img4').delay(2100).fadeIn(1000);
+    $('#img5').delay(2200).fadeIn(1000);
+    $('#img6').delay(2300).fadeIn(1000);
+    $('#img7').delay(2400).fadeIn(1000);
+    $('#img8').delay(2500).fadeIn(1000);
   });
 }
