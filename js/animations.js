@@ -1,12 +1,5 @@
 $(document).ready(function(){
 
-  $('body').on('click', function() {
-    $('audio')[0].play();
-    console.log('funciona');
-});
-
-$('body').trigger('click');
-
   $('body').scrollspy({target: "#navbarScroll", offset: 60});   
 
   $("#navbarScroll a").on('click', function(event) {
@@ -21,6 +14,7 @@ $('body').trigger('click');
       window.location.hash = hash;
     }
   });
+
 
   $('.tile').hide();        
     const isDesktop = verifyIfDesktop();
@@ -43,6 +37,19 @@ $('body').trigger('click');
         $('.hideme').fadeIn();    
         loadMosaic();   
       }
+
+      setTimeout(
+        function() 
+        {
+            const audio = $('audio')[0];
+        
+            if (audio.paused === true)
+              audio.play();
+            else {
+              audio.muted = false;
+              audio.volume = 0.1;
+            }
+        }, 1000);
 });
 
 function loadMosaic() {
@@ -83,5 +90,3 @@ $('#goToTop').click(function() {
         }, 800);
   });
 });
-
-$('audio')[0].volume = 0.1;
