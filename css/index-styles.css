@@ -2,6 +2,30 @@ body {
     position: relative;
 }
 
+.simonetta-regular {
+    font-family: "Simonetta", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.simonetta-black {
+    font-family: "Simonetta", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.atma-regular {
+    font-family: "Atma", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.atma-medium {
+    font-family: "Atma", system-ui;
+    font-weight: 500;
+    font-style: normal;
+}
+
 #background-image {
     background-image: url('../imagens/originais/rafa-buique.jpg');
     background-repeat: no-repeat;
