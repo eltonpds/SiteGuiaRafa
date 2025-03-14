@@ -1,11 +1,13 @@
-$(document).ready(function(){
+$(document).ready(function () {
+  $('body').scrollspy({
+    target: "#navbarScroll",
+    offset: 60
+  });
 
-  $('body').scrollspy({target: "#navbarScroll", offset: 60});   
-
-  $("#navbarScroll a").on('click', function(event) {
+  $("#navbarScroll a").on('click', function (event) {
     if (this.hash !== "") {
-      
-      event.preventDefault(); 
+
+      event.preventDefault();
       var hash = this.hash;
 
       $('html, body').animate({
@@ -15,45 +17,30 @@ $(document).ready(function(){
     }
   });
 
+  $('.tile').hide();
+  const isDesktop = verifyIfDesktop();
+  if (isDesktop) {
+    $(window).scroll(function () {
+      $('.hideme').each(function (i) {
+        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
 
-  $('.tile').hide();        
-    const isDesktop = verifyIfDesktop();
-    if (isDesktop) {
-      $(window).scroll( function(){   
-      $('.hideme').each( function(i){    
-          var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-          var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-            if( bottom_of_window > bottom_of_object ){ 
-                $(this).fadeIn(2000);   
-                loadMosaic();
-              }  
-        });     
-        });  
-      } 
-      else  if (navigator.userAgent.match(/Windows/i) === null 
-      && navigator.userAgent.match(/Android/i)
-      || navigator.userAgent.match(/Nexus/i)) {
-        $('.hideme').fadeIn();    
-        loadMosaic();   
-      }
-
-      setTimeout(
-        function() 
-        {
-            const audio = $('audio')[0];
-        
-            if (audio.paused === true)
-              audio.play();
-            else {
-              audio.muted = false;
-              audio.volume = 0.1;
-            }
-        }, 1000);
+        if (bottom_of_window > bottom_of_object) {
+          $(this).fadeIn(2000);
+          loadMosaic();
+        }
+      });
+    });
+  } else if (navigator.userAgent.match(/Windows/i) === null &&
+    navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/Nexus/i)) {
+    $('.hideme').fadeIn();
+    loadMosaic();
+  }
 });
 
 function loadMosaic() {
-  $('.tile').each( function(i) {
+  $('.tile').each(function (i) {
     $('#img1').delay(1500).fadeIn(1000);
     $('#img2').delay(1700).fadeIn(1000);
     $('#img3').delay(1900).fadeIn(1000);
@@ -66,27 +53,29 @@ function loadMosaic() {
 }
 
 function verifyIfDesktop() {
- if (navigator.userAgent.match(/Windows/i) !== null
- && navigator.userAgent.match(/Android/i) === null)
-  return true;
-  else 
-  return false;
+  if (navigator.userAgent.match(/Windows/i) !== null &&
+    navigator.userAgent.match(/Android/i) === null)
+    return true;
+  else
+    return false;
 }
 
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction()
+};
 
 function scrollFunction() {
-    if ($(window).scrollTop() > 690) {
-      $('#goToTop').show();  
-    } else {
-      $('#goToTop').hide();  
-    }
+  if ($(window).scrollTop() > 690) {
+    $('#goToTop').show();
+  } else {
+    $('#goToTop').hide();
+  }
 }
 
-$('#goToTop').click(function() {
-  $('#goToTop').click(function() {
+$('#goToTop').click(function () {
+  $('#goToTop').click(function () {
     $('html, body').animate({
-          scrollTop: 0,
-        }, 800);
+      scrollTop: 0,
+    }, 800);
   });
 });

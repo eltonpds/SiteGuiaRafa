@@ -26,16 +26,6 @@ body {
     font-style: normal;
 }
 
-#background-image {
-    background-image: url('../imagens/originais/rafa-buique.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    display: block;
-    width: 100%;
-    height: 740px;
-}
-
 p {
     text-align: justify;
 }
@@ -132,16 +122,17 @@ aside {
     transition: transform .7s ease;
 }
 
-@media only screen,
+@media screen,
 (min-width: 320px) and (max-width: 560px) {
     #background-image {
         background-image: url('../imagens/originais/rafa-buique.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position: center;
         background-size: cover;
+        background-position: center;
         display: block;
         width: 100%;
+        height: 500px;
     }
 
     #goToTop {
@@ -149,20 +140,49 @@ aside {
         bottom: 20px;
         right: -5px;
     }
-}
 
-@media screen and (max-width: 650px) {
-    .container {
-        display: block;
+    #audio {
+        text-align: center;
     }
 
+    audio {
+        z-index: 99;
+        width: 70% !important;
+        top: 27rem;
+    }
+}
+
+@media only screen,
+(min-width: 560px) and (max-width: 767px) {
     .tile {
         margin-bottom: 1rem;
+    }
+
+    #goToTop {
+        padding: 15px;
+        bottom: 20px;
+    }
+
+    #audio {
+        position: relative;
+        top: 25rem;
+        right: 4rem;
+    }
+
+    audio {
+        z-index: 9999;
+        width: 30% !important;
+        float: right;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
+
+    #background-image {
+        height: 760px;
+    }
+
     #imagem-corredora {
         float: left;
     }
@@ -173,5 +193,17 @@ aside {
 
     #goToTop {
         padding: 30px;
+    }
+
+    #audio {
+        position: relative;
+        top: 35rem;
+        right: 4rem;
+    }
+
+    audio {
+        z-index: 9999;
+        width: 30% !important;
+        float: right;
     }
 }
