@@ -77,3 +77,5 @@ $('#goToTop').click(function() {
         }, 800);
   });
 });
+
+$('audio')[0].volume = 0.1;
