@@ -123,7 +123,7 @@ aside {
 }
 
 @media screen,
-(min-width: 320px) and (max-width: 560px) {
+(min-width: 320px) and (max-width: 600px) {
     #background-image {
         background-image: url('../imagens/originais/rafa-buique.jpg');
         background-repeat: no-repeat;
@@ -142,18 +142,17 @@ aside {
     }
 
     #audio {
-        text-align: center;
-    }
-
-    audio {
-        z-index: 99;
+        position: relative;
+        float: right;
         width: 70% !important;
-        top: 27rem;
+        z-index: 999;
+        top: 0rem;
+        right: 0rem;
     }
 }
 
 @media only screen,
-(min-width: 560px) and (max-width: 767px) {
+(min-width: 601px) and (max-width: 767px) {
     .tile {
         margin-bottom: 1rem;
     }
@@ -165,19 +164,20 @@ aside {
 
     #audio {
         position: relative;
-        top: 25rem;
-        right: 4rem;
+        top: 23rem;
+        right: 1.5rem;
     }
 
     audio {
-        z-index: 9999;
-        width: 30% !important;
         float: right;
+        z-index: 9999;
+        width: 60% !important;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen,
+(min-width: 768px) and (max-width: 992px) {
 
     #background-image {
         height: 760px;
@@ -197,13 +197,46 @@ aside {
 
     #audio {
         position: relative;
-        top: 35rem;
-        right: 4rem;
+        top: 40rem;
+        right: 3rem;
     }
 
     audio {
-        z-index: 9999;
-        width: 30% !important;
         float: right;
+        z-index: 9999;
+        width: 50% !important;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen,
+(min-width: 993px) and (max-width: 1200px) {
+
+    #background-image {
+        height: 760px;
+    }
+
+    #imagem-corredora {
+        float: left;
+    }
+
+    #imagem-guia {
+        float: right;
+    }
+
+    #goToTop {
+        padding: 30px;
+    }
+
+    #audio {
+        position: relative;
+        top: 33rem;
+        right: 3rem;
+    }
+
+    audio {
+        float: right;
+        z-index: 9999;
+        width: 50% !important;
     }
 }
