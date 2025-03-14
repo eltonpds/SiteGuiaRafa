@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('body').scrollspy({target: "#navbarScroll", offset: 50});   
+  $('body').scrollspy({target: "#navbarScroll", offset: 60});   
 
   $("#navbarScroll a").on('click', function(event) {
     if (this.hash !== "") {
