@@ -1,3 +1,7 @@
+body {
+    position: relative;
+}
+
 #background-image {
     background-image: url('../imagens/originais/rafa-buique.jpg');
     background-repeat: no-repeat;
@@ -83,8 +87,29 @@ aside {
     transform: scale(1.1);
 }
 
+#goToTop {
+    display: none;
+    position: fixed;
+    margin-right: 15px;
+    z-index: 9999;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 30px;
+    border-radius: 50%;
+    background-image: url(../imagens/app-back-to-top-arrow-3.svg);
+    background-color: yellow;
+}
+
+#goToTop:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    -webkit-transition: -webkit-transform .7s ease;
+    transition: transform .7s ease;
+}
+
 @media only screen,
-(min-width: 320px) and (max-width: 560) {
+(min-width: 320px) and (max-width: 560px) {
     #background-image {
         background-image: url('../imagens/originais/rafa-buique.jpg');
         background-repeat: no-repeat;
@@ -93,6 +118,12 @@ aside {
         background-size: cover;
         display: block;
         width: 100%;
+    }
+
+    #goToTop {
+        padding: 15px;
+        bottom: 20px;
+        right: -5px;
     }
 }
 
@@ -108,11 +139,15 @@ aside {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 769px) {
-    #corredora {
+    #imagem-corredora {
         float: left;
     }
 
-    #guia {
+    #imagem-guia {
         float: right;
+    }
+
+    #goToTop {
+        padding: 30px;
     }
 }

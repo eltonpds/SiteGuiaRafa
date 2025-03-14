@@ -14,26 +14,26 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="navbarScroll">
         <a class="navbar-brand" href="#">Rafaela Silva</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
+            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Professora<span class="sr-only">(current)</span></a>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 navbar-nav-scroll">
+                <li class="nav-item">
+                    <a class="nav-link" href="#professora">Professora<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Guia</a>
+                    <a class="nav-link" href="#guia">Guia</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Corredora</a>
+                    <a class="nav-link" href="#corredora">Corredora</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Artesã</a>
+                    <a class="nav-link" href="#artesa">Artesã</a>
                 </li>
             </ul>
         </div>
@@ -42,7 +42,8 @@
     <div id="background-image">
 
     </div>
-    <section class="margens hideme">
+
+    <section class="margens hideme" id="professora" data-spy="scroll" data-target="#navbarScroll">
         <div class="container">
             <h2>Professora de Geografia</h2>
             <div class="row align-items-center">
@@ -69,7 +70,7 @@
         </div>
     </section>
 
-    <article class="margens  hideme">
+    <article class="margens hideme" id="guia" data-spy="scroll" data-target="#navbarScroll">
         <div class="container">
             <h2>Guia de Turismo</h2>
 
@@ -88,19 +89,19 @@
                     </p>
                 </div>
                 <div class="col-md-4 text-center">
-                    <img id="guia" src="imagens/rafa-guia.jpg" class="img-thumbnail" />
+                    <img id="imagem-guia" src="imagens/rafa-guia.jpg" class="img-thumbnail" />
                 </div>
             </div>
         </div>
     </article>
 
-    <aside class="margens hideme">
+    <aside class="margens hideme" id="corredora" data-spy="scroll" data-target="#navbarScroll">
         <div class="container">
             <h2>Corredora</h2>
 
             <div class="row align-items-center">
                 <div class="col-md-4 text-center">
-                    <img id="corredora" src="imagens/rafa-corredora.jpg" class="img-thumbnail"
+                    <img id="imagem-corredora" src="imagens/rafa-corredora.jpg" class="img-thumbnail"
                         style="height: 450px !important;" />
                 </div>
                 <div class="col-md-8">
@@ -120,7 +121,7 @@
             </div>
     </aside>
 
-    <article class="margens hideme">
+    <article class="margens hideme" id="artesa" data-spy="scroll" data-target="#navbarScroll">
         <div class="container">
             <h2>Artesanato</h2>
         </div>
@@ -160,6 +161,8 @@
         </div>
         </div>
     </article>
+
+    <button id="goToTop" title="Ir ao topo"></button>
     <footer>
         <nav class="navbar navbar-light bg-primary justify-content-center">
             <span>Desenvolvido por Elton Santos &copy;</span>
@@ -169,7 +172,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
 </body>
 
 </html>
