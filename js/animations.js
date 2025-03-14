@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+  $('audio')[0].volume = 0.1;
+
   $('body').scrollspy({
     target: "#navbarScroll",
     offset: 60
