@@ -1,4 +1,12 @@
 $(document).ready(function(){
+
+  $('body').on('click', function() {
+    $('audio')[0].play();
+    console.log('funciona');
+});
+
+$('body').trigger('click');
+
   $('body').scrollspy({target: "#navbarScroll", offset: 60});   
 
   $("#navbarScroll a").on('click', function(event) {
@@ -13,9 +21,7 @@ $(document).ready(function(){
       window.location.hash = hash;
     }
   });
-});
 
-$(document).ready(function() {    
   $('.tile').hide();        
     const isDesktop = verifyIfDesktop();
     if (isDesktop) {
