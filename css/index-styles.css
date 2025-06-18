@@ -118,16 +118,16 @@ p {
 }
 
 #goToTop {
-    display: none;
+    /* display: none; */
     position: fixed;
-    margin-right: 15px;
+    margin-left: 70rem;
+    bottom: 50px;
     z-index: 9999;
-    outline: none;
     cursor: pointer;
     border: none;
     padding: 30px;
     border-radius: 50%;
-    background-image: url(../imagens/app-back-to-top-arrow-3.svg);
+    background-image: url("../imagens/app-back-to-top-arrow-3.svg");
     background-color: yellow;
 }
 
@@ -160,6 +160,44 @@ p {
     }
 }
 
+@media only screen and (max-width: 1200px) {
+
+    #goToTop {
+        margin-left: 65rem;
+    }
+}
+
+@media only screen and (max-width: 1120px) {
+    #goToTop {
+        margin-left: 60rem;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    #goToTop {
+        margin-left: 55rem;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    #goToTop {
+        margin-left: 50rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #goToTop {
+        margin-left: 48rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #goToTop {
+        margin-left: 45rem;
+    }
+}
+
+
 @media only screen and (max-width: 800px) {
     #imagem-corredora {
         float: left;
@@ -170,7 +208,7 @@ p {
     }
 
     #goToTop {
-        padding: 30px;
+        margin-left: 43rem;
     }
 
     #audio {
@@ -181,6 +219,57 @@ p {
     }
 }
 
+@media only screen and (max-width: 770px) {
+    #goToTop {
+        margin-left: 40rem;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    #goToTop {
+        margin-left: 38rem;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    #goToTop {
+        padding: 25px;
+    }
+}
+
+@media only screen and (max-width: 685px) {
+    #goToTop {
+        padding: 22px;
+        margin-left: 37rem;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    #goToTop {
+        margin-left: 36.8rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #goToTop {
+        margin-left: 36rem;
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 635px) {
+    #goToTop {
+        margin-left: 35.2rem;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    #goToTop {
+        padding: 18px;
+        margin-left: 35rem;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     #imagem-corredora {
         float: left;
@@ -188,10 +277,6 @@ p {
 
     #imagem-guia {
         float: right;
-    }
-
-    #goToTop {
-        padding: 30px;
     }
 
     #audio {
@@ -206,11 +291,6 @@ p {
 @media only screen and (max-width: 500px) {
     .tile {
         margin-bottom: 1rem;
-    }
-
-    #goToTop {
-        padding: 15px;
-        bottom: 20px;
     }
 
     #audio {

@@ -68,7 +68,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-  if ($(window).scrollTop() > 690) {
+  if ($(window).scrollTop() > 400) {
     $('#goToTop').show();
   } else {
     $('#goToTop').hide();
