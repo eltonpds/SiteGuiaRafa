@@ -220,6 +220,11 @@ p {
 }
 
 @media only screen and (max-width: 770px) {
+    .card-body {
+        width: 100%;
+        margin-left: 85px;
+    }
+
     #goToTop {
         margin-left: 40rem;
     }
