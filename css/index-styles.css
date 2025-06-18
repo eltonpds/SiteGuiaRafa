@@ -147,6 +147,10 @@ p {
         float: right;
     }
 
+    .card-body {
+        text-align: center !important;
+    }
+
     #goToTop {
         padding: 30px;
     }
@@ -161,7 +165,6 @@ p {
 }
 
 @media only screen and (max-width: 1200px) {
-
     #goToTop {
         margin-left: 65rem;
     }
@@ -220,11 +223,6 @@ p {
 }
 
 @media only screen and (max-width: 770px) {
-    .card-body {
-        width: 100%;
-        margin-left: 85px;
-    }
-
     #goToTop {
         margin-left: 40rem;
     }
@@ -243,6 +241,10 @@ p {
 }
 
 @media only screen and (max-width: 685px) {
+    .card-body {
+        margin-left: 5rem;
+    }
+
     #goToTop {
         padding: 22px;
         margin-left: 37rem;
@@ -284,12 +286,43 @@ p {
         float: right;
     }
 
+    div.card-body {
+        font-size: 70%;
+    }
+
+    div.card-body ul {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    #goToTop {
+        margin-left: 32rem;
+    }
+
     #audio {
         position: relative !important;
         float: right !important;
         top: 8rem;
         right: 0.5rem;
         opacity: 75%;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    #goToTop {
+        margin-left: 31rem;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #goToTop {
+        margin-left: 30rem;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    #goToTop {
+        margin-left: 27.5rem;
     }
 }
 
