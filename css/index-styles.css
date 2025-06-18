@@ -118,6 +118,7 @@ p {
 }
 
 #goToTop {
+    background-image: url('../svg/app-back-to-top-arrow-3.svg');
     display: none;
     position: fixed;
     margin-left: 70rem;
@@ -127,7 +128,6 @@ p {
     border: none;
     padding: 30px;
     border-radius: 50%;
-    background-image: url("../svg/app-back-to-top-arrow-3.svg");
     background-color: yellow;
 }
 
