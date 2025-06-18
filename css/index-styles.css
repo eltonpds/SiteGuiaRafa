@@ -47,6 +47,11 @@ aside {
     color: azure;
 }
 
+aside,
+p {
+    text-align: center;
+}
+
 .hideme {
     display: none;
 }

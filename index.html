@@ -40,6 +40,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#artesa">Artesã</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -49,8 +52,7 @@
 
         <div id="audio">
             <audio controls muted playsinline autoplay="autoplay">
-                <source src=" https://github.com/eltonpds/SiteGuiaRafa/blob/main/musica/era-uma-vez.mp3?raw=true"
-                    type="audio/mp3">
+                <source src="musica/era-uma-vez.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
         </div>
@@ -175,10 +177,36 @@
         </div>
     </article>
 
-    <button id="goToTop" title="Ir ao topo"></button>
+    <aside class="margens hideme" id="contato" data-spy="scroll" data-target="#navbarScroll">
+        <div class="card mb-1" style="width:30rem; margin: 0 auto;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img width="120%" src="./imagens/rafa-olhos-verdes.jpg">
+                </div>
+                <div class="col-md-8 text-center">
+                    <div class="card-body atma-medium">
+                        <h2 class="card-title" style="color: black;">Contato</h2>
+                        <p>
+                            <a class="card-link"
+                                href="https://api.whatsapp.com/send?phone=5581999386392&text=Ol%C3%A1%20Rafaela,%20tudo%20bem?">
+                                <img src="svg/whatsapp-brands.svg" width="7%" /> Fale comigo
+                            </a>
+                        </p>
+                        <p>
+                            <a class="card-link" href="https://www.instagram.com/profrafaella_" target="_blank">
+                                <img src="svg/instagram-brands.svg" width="7%" /> Profª Rafela
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <button id=" goToTop" title="Ir ao topo"></button>
     <footer>
-        <nav class="navbar navbar-light bg-primary justify-content-center simonetta-black">
-            <span style="color: #FFFFFF;">Desenvolvido por Canso &copy;</span>
+        <nav class="navbar navbar-light justify-content-center align-items-center simonetta-black">
+            <span>Todos os direitos reservados &copy;</span>
         </nav>
     </footer>
 
