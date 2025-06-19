@@ -2,6 +2,10 @@ body {
     position: relative;
 }
 
+body p {
+    text-align: justify;
+}
+
 .simonetta-regular {
     font-family: "Simonetta", serif;
     font-weight: 400;
