@@ -2,7 +2,9 @@ body {
     position: relative;
 }
 
-body p {
+section p,
+article p,
+aside p {
     text-align: justify;
 }
 
@@ -227,6 +229,13 @@ p {
 }
 
 @media only screen and (max-width: 770px) {
+
+    sectiong img,
+    article img,
+    aside img {
+        text-align: center !important;
+    }
+
     #goToTop {
         margin-left: 40rem;
     }
