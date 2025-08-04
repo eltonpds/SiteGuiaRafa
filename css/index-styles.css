@@ -26,7 +26,7 @@ p {
 }
 
 #background-image {
-    background-image: url('../imagens/originais/rafa-buique.jpg');
+    background-image: url('../imagens/fundo/rafa-buique.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -37,11 +37,9 @@ p {
 }
 
 section,
+article,
 aside {
-    background-color: #007bff;
-    color: azure;
-
-    border-bottom: azure;
+    border: azure;
     border-style: solid;
     border-width: 2px;
 }
@@ -52,7 +50,7 @@ p {
 }
 
 #professora {
-    background-image: url('../imagens/desenho-da-escola-imagens-de-fundo-e-espaco-de-copia_1179130-583147.jpg');
+    background-image: url('../imagens/fundo/desenho-da-escola-imagens-de-fundo-e-espaco-de-copia_1179130-583147.jpg');
     background-repeat: no-repeat;
     background-attachment: local;
     background-size: cover;
@@ -64,7 +62,7 @@ p {
 }
 
 #guia {
-    background-image: url('../imagens/imagem-catimbau-floresta.jpg');
+    background-image: url('../imagens/fundo/imagem-catimbau-floresta.jpg');
     background-repeat: no-repeat;
     background-attachment: local;
     background-size: cover;
@@ -76,7 +74,7 @@ p {
 }
 
 #corredora {
-    background-image: url('../imagens/imagem-corrida.jpg');
+    background-image: url('../imagens/fundo/imagem-corrida.jpg');
     background-repeat: no-repeat;
     background-attachment: local;
     background-size: cover;
@@ -88,7 +86,7 @@ p {
 }
 
 #artesa {
-    background-image: url('../imagens/artesanato-fundo.jpg');
+    background-image: url('../imagens/fundo/artesanato-fundo.jpg');
     background-repeat: no-repeat;
     background-attachment: local;
     background-size: cover;
@@ -100,7 +98,7 @@ p {
 }
 
 #contato {
-    background-image: url('../imagens/fundo-contato3.jpg');
+    background-image: url('../imagens/fundo/fundo-contato3.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
