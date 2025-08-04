@@ -10,25 +10,13 @@ aside p {
 
 .simonetta-regular {
     font-family: "Simonetta", serif;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
 }
 
 .simonetta-black {
     font-family: "Simonetta", serif;
     font-weight: 900;
-    font-style: normal;
-}
-
-.atma-regular {
-    font-family: "Atma", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.atma-medium {
-    font-family: "Atma", system-ui;
-    font-weight: 500;
     font-style: normal;
 }
 
@@ -51,11 +39,75 @@ section,
 aside {
     background-color: #007bff;
     color: azure;
+
+    border-bottom: azure;
+    border-style: solid;
+    border-width: 2px;
 }
 
 aside,
 p {
     text-align: center;
+}
+
+#professora {
+    background-image: url('../imagens/desenho-da-escola-imagens-de-fundo-e-espaco-de-copia_1179130-583147.jpg');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    background-position: center;
+    display: block;
+
+    color: black;
+    text-shadow: 2px 2px azure;
+}
+
+#guia {
+    background-image: url('../imagens/imagem-catimbau-floresta.jpg');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    background-position: center;
+    display: block;
+
+    color: azure;
+    text-shadow: 0px 0px 15px black;
+}
+
+#corredora {
+    background-image: url('../imagens/imagem-corrida.jpg');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    background-position: center;
+    display: block;
+
+    color: black;
+    text-shadow: 1px 1px 15px azure;
+}
+
+#artesa {
+    background-image: url('../imagens/fundo-artesanato.jpg');
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    background-position: center;
+    display: block;
+
+    color: black;
+    text-shadow: 1px 1px 15px azure;
+}
+
+#contato {
+    background-image: url('../imagens/fundo-contato3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: block;
+
+    color: black;
+    text-shadow: 1px 1px 15px azure;
 }
 
 .hideme {
