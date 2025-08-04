@@ -52,7 +52,7 @@ p {
 #professora {
     background-image: url('../imagens/fundo/desenho-da-escola-imagens-de-fundo-e-espaco-de-copia_1179130-583147.jpg');
     background-repeat: no-repeat;
-    background-attachment: local;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     display: block;
@@ -76,7 +76,7 @@ p {
 #corredora {
     background-image: url('../imagens/fundo/imagem-corrida.jpg');
     background-repeat: no-repeat;
-    background-attachment: local;
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     display: block;
@@ -196,16 +196,12 @@ p {
 }
 
 @media only screen and (max-width: 1400px) {
-    #imagem-corredora {
-        float: left;
+    .card-body {
+        text-align: center !important;
     }
 
     #imagem-guia {
         float: right;
-    }
-
-    .card-body {
-        text-align: center !important;
     }
 
     #goToTop {
@@ -259,14 +255,6 @@ p {
 
 
 @media only screen and (max-width: 800px) {
-    #imagem-corredora {
-        float: left;
-    }
-
-    #imagem-guia {
-        float: right;
-    }
-
     #goToTop {
         margin-left: 43rem;
     }
@@ -280,6 +268,9 @@ p {
 }
 
 @media only screen and (max-width: 770px) {
+    #imagem-guia {
+        float: right;
+    }
 
     section img,
     article img,
@@ -289,6 +280,12 @@ p {
 
     #goToTop {
         margin-left: 40rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #imagem-guia {
+        float: none;
     }
 }
 
@@ -342,14 +339,6 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
-    #imagem-corredora {
-        float: left;
-    }
-
-    #imagem-guia {
-        float: right;
-    }
-
     div.card-body {
         font-size: 70%;
     }
@@ -391,6 +380,16 @@ p {
 }
 
 @media only screen and (max-width: 500px) {
+    #professora {
+        background-size: contain;
+        background-repeat: repeat;
+        background-attachment: fixed !important;
+    }
+
+    .card {
+        width: 80%;
+    }
+
     .tile {
         margin-bottom: 1rem;
     }
