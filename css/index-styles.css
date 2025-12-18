@@ -21,10 +21,6 @@ aside p {
     font-style: normal;
 }
 
-p {
-    text-align: justify;
-}
-
 #background-image {
     background-image: url('../imagens/fundo/rafa-buique.jpg');
     background-repeat: no-repeat;
