@@ -93,7 +93,8 @@ p {
     text-shadow: 0px 0px 10px azure;
 }
 
-#contato {
+#contato,
+footer {
     background-image: url('../imagens/fundo/fundo-contato3.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
