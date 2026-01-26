@@ -1,0 +1,22 @@
+.pin {
+    z-index: 999;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 60px 60px 0px 60px;
+    position: absolute;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.pin::after {
+    content: "";
+    top: 5px;
+    left: 5.2px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    position: absolute;
+    border-radius: 60px;
+    background-color: black;
+}

@@ -13,6 +13,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
     <link href="css/index-styles.css" rel="stylesheet" />
+    <link href="css/mapa.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +22,7 @@
         href="https://fonts.googleapis.com/css2?family=Atma:wght@400;500&family=Simonetta:wght@400;900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap"
         rel="stylesheet" />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q9F8V7NHB"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-5Q9F8V7NHB"></script> -->
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -49,6 +50,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#guia">Guia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#locaisVisitados">Locais Visitados</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#corredora">Corredora</a>
@@ -160,6 +164,18 @@
         </div>
     </article>
 
+    <article class="margens" id="locaisVisitados" data-spy="scroll" data-target="#navbarScroll">
+        <div class="container">
+            <h2 class="simonetta-black">Locais Visitados</h2>
+
+            <div class="row align-items-center" id="estados">
+                <div class="col-md-6">
+                    <img id="mapaBrasil" style="width: 100%;" src="./imagens/mapa brasil.png" />
+                </div>
+            </div>
+        </div>
+    </article>
+
     <aside class="margens hideme" id="corredora" data-spy="scroll" data-target="#navbarScroll">
         <div class="container">
             <h2 class="simonetta-black">Corredora</h2>
@@ -266,6 +282,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/animations.js"></script>
+    <script src="js/mapaBrasil.js"></script>
 </body>
 
 </html>
