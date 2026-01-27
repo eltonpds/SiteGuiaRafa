@@ -2,7 +2,7 @@
     z-index: 999;
     width: 20px;
     height: 20px;
-    background-color: yellow;
+    background-color: black;
     border-radius: 60px 60px 0px 60px;
     position: absolute;
     transform: rotate(45deg);
@@ -18,5 +18,28 @@
     background: white;
     position: absolute;
     border-radius: 60px;
-    background-color: black;
+    background-color: white;
+}
+
+.pin:hover {
+    width: 25px;
+    height: 25px;
+
+    &::after {
+        width: 10px;
+        height: 10px;
+        background-color: yellow;
+    }
+}
+
+.pin.active {
+    background-color: yellow;
+    width: 25px;
+    height: 25px;
+
+    &::after {
+        width: 10px;
+        height: 10px;
+        background-color: black;
+    }
 }

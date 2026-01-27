@@ -55,16 +55,16 @@ window.onload = function gerarLocal() {
         estadoPorDataId.style.top = coordenadas[state].altitude + 'px';
         estadoPorDataId.style.left = coordenadas[state].longitude + 'px';
     };
-    playVideoPara(coordenadas[0].id);
-    playVideoPB(coordenadas[2].id);
+    playVideoPara(coordenadas[0].id, coordenadas[0].sigla);
+    playVideoPB(coordenadas[2].id, coordenadas[2].sigla);
 
 }
 
 
 function mountPinDivHtml(state, htmlEstado) {
 
-    htmlEstado.insertAdjacentHTML("afterend", '<a alt="Estado: ' + state.nome + '">' +
-        '<div class="pin" data-id="' + state.id + '"></div></a>');
+    htmlEstado.insertAdjacentHTML("afterend", '<a>' +
+        '<div title="Estado: ' + state.nome + '" class="pin" data-id="' + state.id + '" id="pin' + state.sigla + '"></div></a>');
 }
 
 function mountVideoDivHtml(state, htmlEstado) {
@@ -102,16 +102,30 @@ function isPausedThanPlay(video) {
     }
 }
 
-function playVideoPara(id) {
+function deactivateAllActivePins(pinPaaDesativar) {
+    let pins = document.getElementsByClassName('pin');
+    console.log('desativando')
+
+    for (var i in pins) {
+        console.log(pins[i].className);
+        if (pins[i].className === "pin active")
+            pins[i].className = "pin";
+    }
+}
+
+function playVideoPara(estadoId, estadoSigla) {
 
     let estadoPara = document.querySelector('[data-id="0"]');
     let isVideoPaused = document.getElementById('videoPA');
+    let pinEstado = document.getElementById('');
 
     estadoPara.addEventListener('click', function () {
         isPlayingThanPause();
         hiddeAll();
+        deactivateAllActivePins();
+        this.classList.toggle('active');
 
-        let videoPara = document.getElementById(id);
+        let videoPara = document.getElementById(estadoId);
         if (videoPara) {
             if (videoPara.style.display === "block") {
                 estadoPara.style.display = "none";
@@ -123,7 +137,7 @@ function playVideoPara(id) {
     });
 }
 
-function playVideoPB(id) {
+function playVideoPB(estadoId, estadoSigla) {
 
     let estadoPB = document.querySelector('[data-id="2"]');
     let isVideoPaused = document.getElementById('videoPB');
@@ -131,8 +145,10 @@ function playVideoPB(id) {
     estadoPB.addEventListener('click', function () {
         isPlayingThanPause();
         hiddeAll();
+        deactivateAllActivePins();
+        this.classList.toggle('active');
 
-        let videoPB = document.getElementById(id);
+        let videoPB = document.getElementById(estadoId);
         if (videoPB) {
             if (videoPB.style.display === "block") {
                 estadoPara.style.display = "none";
