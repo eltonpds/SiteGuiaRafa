@@ -5272,7 +5272,7 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .nav-link.active {
   color: rgba(243, 206, 99, 1);
-  font-weight: bold;
+  font-weight: 800;
   font-size: large !important;
 
   -webkit-text-stroke-width: 0.3px;
