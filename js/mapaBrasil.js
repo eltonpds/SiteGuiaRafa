@@ -6,40 +6,54 @@ let coordenadas = [{
         "id": 0,
         "nome": "Pará",
         "sigla": "PA",
-        "altitude": 70,
-        "longitude": 360,
         "url": "../videos/BelemPA.mp4"
     },
     {
         "id": 1,
         "nome": "Pernambuco",
         "sigla": "PE",
-        "altitude": 165,
-        "longitude": 500,
         "url": ""
     },
     {
         "id": 2,
         "nome": "Paraíba",
         "sigla": "PB",
-        "altitude": 145,
-        "longitude": 530,
         "url": "../videos/AreiaPB.mp4"
     },
     {
         "id": 3,
         "nome": "Rio Grande do Norte",
         "sigla": "RN",
-        "altitude": 125,
-        "longitude": 510,
         "url": ""
     },
     {
         "id": 4,
         "nome": "Alagoas",
         "sigla": "AL",
-        "altitude": 180,
-        "longitude": 525,
+        "url": ""
+    },
+    {
+        "id": 5,
+        "nome": "Minas Gerais",
+        "sigla": "MG",
+        "url": ""
+    },
+    {
+        "id": 6,
+        "nome": "Ceará",
+        "sigla": "CE",
+        "url": ""
+    },
+    {
+        "id": 7,
+        "nome": "Bahia",
+        "sigla": "BA",
+        "url": ""
+    },
+    {
+        "id": 8,
+        "nome": "Rio de Janeiro",
+        "sigla": "RJ",
         "url": ""
     }
 ];
@@ -52,8 +66,8 @@ window.onload = function gerarLocal() {
         let videoEstadoPorId = document.getElementById(coordenadas[state].id);
         let estadoPorDataId = document.querySelector('[data-id="' + coordenadas[state].id + '"]');
 
-        estadoPorDataId.style.top = coordenadas[state].altitude + 'px';
-        estadoPorDataId.style.left = coordenadas[state].longitude + 'px';
+        estadoPorDataId.style.top = coordenadas[state].altitude + 'rem';
+        estadoPorDataId.style.left = coordenadas[state].longitude + 'rem';
     };
     playVideoPara(coordenadas[0].id, coordenadas[0].sigla);
     playVideoPB(coordenadas[2].id, coordenadas[2].sigla);
@@ -70,7 +84,7 @@ function mountPinDivHtml(state, htmlEstado) {
 function mountVideoDivHtml(state, htmlEstado) {
 
     htmlEstado.insertAdjacentHTML("beforeend", '<div class="col-md-6 conteudoVideo" id="' + state.id + '" alt="Vídeo sobre ' + state.nome + '"style="display:none">' +
-        '<video id="video' + state.sigla + '" controls width="50%">' +
+        '<video id="video' + state.sigla + '" controls width="55%">' +
         '<source src="' + state.url + '" type="video/mp4">' +
         'Your browser does not support the video tag. </video>' +
         '</div>');
@@ -80,8 +94,11 @@ function hiddeAll() {
     let videos = document.getElementsByClassName("conteudoVideo");
     for (var i in videos) {
         if (videos[i].style) {
-            if (videos[i].style.display === "block")
+            if (videos[i].style.display === "block") {
                 videos[i].style.display = "none";
+                videos[i].classList.remove('d-flex');
+                videos[i].classList.remove('justify-content-md-center');
+            }
         }
 
     }
@@ -104,10 +121,8 @@ function isPausedThanPlay(video) {
 
 function deactivateAllActivePins(pinPaaDesativar) {
     let pins = document.getElementsByClassName('pin');
-    console.log('desativando')
 
     for (var i in pins) {
-        console.log(pins[i].className);
         if (pins[i].className === "pin active")
             pins[i].className = "pin";
     }
@@ -117,7 +132,6 @@ function playVideoPara(estadoId, estadoSigla) {
 
     let estadoPara = document.querySelector('[data-id="0"]');
     let isVideoPaused = document.getElementById('videoPA');
-    let pinEstado = document.getElementById('');
 
     estadoPara.addEventListener('click', function () {
         isPlayingThanPause();
@@ -128,10 +142,12 @@ function playVideoPara(estadoId, estadoSigla) {
         let videoPara = document.getElementById(estadoId);
         if (videoPara) {
             if (videoPara.style.display === "block") {
-                estadoPara.style.display = "none";
+                videoPara.style.display = "none";
+                videoPara.classList.remove('d-flex justify-content-md-center');
             } else {
                 isPausedThanPlay(isVideoPaused);
                 videoPara.style.display = "block";
+                videoPara.className += ' d-flex justify-content-md-center ';
             }
         }
     });
@@ -151,10 +167,11 @@ function playVideoPB(estadoId, estadoSigla) {
         let videoPB = document.getElementById(estadoId);
         if (videoPB) {
             if (videoPB.style.display === "block") {
-                estadoPara.style.display = "none";
+                videoPB.style.display = "none";
             } else {
                 isPausedThanPlay(isVideoPaused);
                 videoPB.style.display = "block";
+                videoPB.className += ' d-flex justify-content-md-center ';
             }
         };
     });
