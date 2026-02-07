@@ -98,6 +98,11 @@ video {
         top: 22.8rem;
         left: 26.9rem;
     }
+
+    #pinRS {
+        top: 30.5rem;
+        left: 19rem;
+    }
 }
 
 @media only screen and (min-width: 1120px) and (max-width: 1199px) {
@@ -144,6 +149,11 @@ video {
     #pinRJ {
         top: 18.8rem;
         left: 22.4rem;
+    }
+
+    #pinRS {
+        top: 25rem;
+        left: 16rem;
     }
 }
 
@@ -192,6 +202,11 @@ video {
         top: 18.8rem;
         left: 22.4rem;
     }
+
+    #pinRS {
+        top: 25rem;
+        left: 16rem;
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -238,6 +253,11 @@ video {
     #pinRJ {
         top: 13.3rem;
         left: 16.5rem;
+    }
+
+    #pinRS {
+        top: 18rem;
+        left: 11.5rem;
     }
 }
 
@@ -313,6 +333,11 @@ video {
         top: 21.3rem;
         left: 25.5rem;
     }
+
+    #pinRS {
+        top: 28rem;
+        left: 18rem;
+    }
 }
 
 @media only screen and (min-width: 550px) and (max-width: 559px) {
@@ -380,6 +405,11 @@ video {
         top: 21rem;
         left: 25rem;
     }
+
+    #pinRS {
+        top: 28rem;
+        left: 18rem;
+    }
 }
 
 @media only screen and (min-width: 540px) and (max-width: 549px) {
@@ -426,6 +456,11 @@ video {
     #pinRJ {
         top: 20.5rem;
         left: 24.7rem;
+    }
+
+    #pinRS {
+        top: 28rem;
+        left: 17rem;
     }
 }
 
@@ -474,6 +509,11 @@ video {
         top: 20.2rem;
         left: 24.2rem;
     }
+
+    #pinRS {
+        top: 28rem;
+        left: 18rem;
+    }
 }
 
 @media only screen and (min-width: 520px) and (max-width: 529px) {
@@ -518,8 +558,13 @@ video {
     }
 
     #pinRJ {
-        top: 19.6rem;
-        left: 2rem;
+        top: 19.9rem;
+        left: 24rem;
+    }
+
+    #pinRS {
+        top: 26.5rem;
+        left: 16.5rem;
     }
 }
 
@@ -568,6 +613,11 @@ video {
         top: 19.2rem;
         left: 23.2rem;
     }
+
+    #pinRS {
+        top: 28rem;
+        left: 18rem;
+    }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 509px) {
@@ -614,5 +664,10 @@ video {
     #pinRJ {
         top: 18.8rem;
         left: 22.8rem;
+    }
+
+    #pinRS {
+        top: 25rem;
+        left: 16rem;
     }
 }
