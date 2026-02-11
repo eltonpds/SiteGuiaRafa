@@ -55,13 +55,21 @@ let coordenadas = [{
         "nome": "Rio de Janeiro",
         "sigla": "RJ",
         "url": ""
+    },
+    {
+        "id": 9,
+        "nome": "Rio Grande do Sul",
+        "sigla": "RS",
+        "url": ""
     }
 ];
 
 window.onload = function gerarLocal() {
     for (var state in coordenadas) {
         mountPinDivHtml(coordenadas[state], mapaBrasil);
-        mountVideoDivHtml(coordenadas[state], estados);
+
+        if (coordenadas[state].url !== "")
+            mountVideoDivHtml(coordenadas[state], estados);
 
         let videoEstadoPorId = document.getElementById(coordenadas[state].id);
         let estadoPorDataId = document.querySelector('[data-id="' + coordenadas[state].id + '"]');
@@ -77,17 +85,35 @@ window.onload = function gerarLocal() {
 
 function mountPinDivHtml(state, htmlEstado) {
 
-    htmlEstado.insertAdjacentHTML("afterend", '<a>' +
-        '<div title="Estado: ' + state.nome + '" class="pin" data-id="' + state.id + '" id="pin' + state.sigla + '"></div></a>');
+    const isDesktop = verifyIfDesktop();
+
+    let html = '<a id="modal' + state.sigla + '">' +
+        '<div title="Estado: ' + state.nome + '" class="pin" data-id="' + state.id + '" id="pin' + state.sigla + '"></div></a>';
+
+    if (isDesktop) {
+        htmlEstado.insertAdjacentHTML("afterend", html);
+
+    } else {
+        let pinModal = 'data-toggle="modal" data-target="#modalMapaMobile' + state.sigla + '"';
+
+        let mobileHtml = '<a id="modal' + state.sigla + '" ' + pinModal + '>' +
+            '<div title="Estado: ' + state.nome + '" class="pin" data-id="' + state.id + '" id="pin' + state.sigla + '"></div></a>'
+
+        htmlEstado.insertAdjacentHTML("afterend", mobileHtml);
+    }
 }
 
 function mountVideoDivHtml(state, htmlEstado) {
 
-    htmlEstado.insertAdjacentHTML("beforeend", '<div class="col-md-6 conteudoVideo" id="' + state.id + '" alt="Vídeo sobre ' + state.nome + '"style="display:none">' +
-        '<video id="video' + state.sigla + '" controls width="55%">' +
-        '<source src="' + state.url + '" type="video/mp4">' +
-        'Your browser does not support the video tag. </video>' +
-        '</div>');
+    if (verifyIfDesktop()) {
+        htmlEstado.insertAdjacentHTML("beforeend", '<div class="col-md-6 conteudoVideo" id="' + state.id + '" alt="Vídeo sobre ' + state.nome + '"style="display:none">' +
+            '<video id="video' + state.sigla + '" controls width="55%">' +
+            '<source src="' + state.url + '" type="video/mp4">' +
+            'Your browser does not support the video tag. </video>' +
+            '</div>');
+    } else {
+        mountModal(state, htmlEstado);
+    }
 }
 
 function hiddeAll() {
@@ -134,20 +160,23 @@ function playVideoPara(estadoId, estadoSigla) {
     let isVideoPaused = document.getElementById('videoPA');
 
     estadoPara.addEventListener('click', function () {
-        isPlayingThanPause();
-        hiddeAll();
-        deactivateAllActivePins();
-        this.classList.toggle('active');
 
-        let videoPara = document.getElementById(estadoId);
-        if (videoPara) {
-            if (videoPara.style.display === "block") {
-                videoPara.style.display = "none";
-                videoPara.classList.remove('d-flex justify-content-md-center');
-            } else {
-                isPausedThanPlay(isVideoPaused);
-                videoPara.style.display = "block";
-                videoPara.className += ' d-flex justify-content-md-center ';
+        if (verifyIfDesktop()) {
+            isPlayingThanPause();
+            hiddeAll();
+            deactivateAllActivePins();
+            this.classList.toggle('active');
+
+            let videoPara = document.getElementById(estadoId);
+            if (videoPara) {
+                if (videoPara.style.display === "block") {
+                    videoPara.style.display = "none";
+                    videoPara.classList.remove('d-flex justify-content-md-center');
+                } else {
+                    isPausedThanPlay(isVideoPaused);
+                    videoPara.style.display = "block";
+                    videoPara.className += ' d-flex justify-content-md-center ';
+                }
             }
         }
     });
@@ -158,21 +187,60 @@ function playVideoPB(estadoId, estadoSigla) {
     let estadoPB = document.querySelector('[data-id="2"]');
     let isVideoPaused = document.getElementById('videoPB');
 
-    estadoPB.addEventListener('click', function () {
-        isPlayingThanPause();
-        hiddeAll();
-        deactivateAllActivePins();
-        this.classList.toggle('active');
+    if (verifyIfDesktop()) {
+        estadoPB.addEventListener('click', function () {
+            isPlayingThanPause();
+            hiddeAll();
+            deactivateAllActivePins();
+            this.classList.toggle('active');
 
-        let videoPB = document.getElementById(estadoId);
-        if (videoPB) {
-            if (videoPB.style.display === "block") {
-                videoPB.style.display = "none";
-            } else {
-                isPausedThanPlay(isVideoPaused);
-                videoPB.style.display = "block";
-                videoPB.className += ' d-flex justify-content-md-center ';
-            }
-        };
-    });
+            let videoPB = document.getElementById(estadoId);
+            if (videoPB) {
+                if (videoPB.style.display === "block") {
+                    videoPB.style.display = "none";
+                } else {
+                    isPausedThanPlay(isVideoPaused);
+                    videoPB.style.display = "block";
+                    videoPB.className += ' d-flex justify-content-md-center ';
+                }
+            };
+        });
+    }
+}
+
+function verifyIfDesktop() {
+    if (navigator.userAgent.match(/Windows/i) !== null)
+        return true;
+    else
+        return false;
+}
+
+function mountModal(state, htmlEstado) {
+    let modal = '"<div class="modal fade" id="modalMapaMobile' + state.sigla + '" tabindex="-1"   aria-labelledby="modalMapaMobileLabel"' +
+        'aria-hidden="true">' +
+        '<div class="modal-dialog">' +
+        '<div class="modal-content">' +
+        '<div class="modal-header">' +
+        '<h5 class="modal-title" id="modalMapaMobileLabel">Estado: ' + state.nome + '</h5>' +
+        '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' +
+        '<span aria-hidden="true">&times;</span>' +
+        '</button>' +
+        '</div>' +
+        '<div class="modal-body">' +
+        '<div class="container">' +
+        '<div class="text-center conteudoVideo" id="' + state.id + '" alt="Vídeo sobre ' + state.nome + '">' +
+        '<video id="video' + state.sigla + '" controls width="50%">' +
+        '<source src="' + state.url + '" type="video/mp4">' +
+        'Your browser does not support the video tag. </video>' +
+        '</div>'
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>"';
+
+    htmlEstado.insertAdjacentHTML("afterend", modal);
+
+    $('#modalMapaMobile' + state.sigla + '').on('hide.bs.modal', function () {
+        isPlayingThanPause();
+    })
 }
