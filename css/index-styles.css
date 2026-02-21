@@ -183,7 +183,7 @@ footer {
     bottom: 50px;
     z-index: 9999;
     cursor: pointer;
-    border: none;
+    border: 2px solid black;
     padding: 30px;
     border-radius: 50%;
     background-color: yellow;
@@ -356,7 +356,7 @@ footer {
     #audio {
         position: relative !important;
         float: right !important;
-        top: 8rem;
+        top: 25rem;
         right: 0.5rem;
         opacity: 75%;
     }
@@ -401,6 +401,17 @@ footer {
         z-index: 120;
         top: 5rem;
         right: 5rem;
+        opacity: 75%;
+    }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    #audio {
+        position: relative !important;
+        float: right !important;
+        z-index: 120;
+        top: 25rem;
+        right: 1rem;
         opacity: 75%;
     }
 }

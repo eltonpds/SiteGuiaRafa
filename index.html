@@ -69,7 +69,7 @@
 
     <div id="background-image">
         <div id="audio">
-            <audio controls muted playsinline autoplay="autoplay">
+            <audio controls playsinline autoplay="autoplay" id="audioFundo">
                 <source src="./musica/a-vida-do-viajante.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
@@ -171,6 +171,10 @@
             <div class="row align-items-center" id="estados">
                 <div class="col-md-6">
                     <img id="mapaBrasil" style="width: 100%;" src="./imagens/mapa brasil.png" />
+                </div>
+                <div class="col-md-6" id="no-state-selected" style="display: none;">
+                    <h4 class="simonetta-black">Selecione um local</h4>
+                    <img class="d-flex mx-auto" id="seta-indicando-mapa" src="./svg/right-arrow.png" />
                 </div>
             </div>
         </div>

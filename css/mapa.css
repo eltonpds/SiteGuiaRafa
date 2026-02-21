@@ -44,11 +44,52 @@
     }
 }
 
-video {
+#no-state-selected {
+    margin-top: -170px;
+}
+
+#no-state-selected>h4 {
+    text-align: center;
+}
+
+#seta-indicando-mapa {
+    margin-top: 50px;
+    rotate: 180deg;
+    width: 20%;
+    border: 2px solid black;
+    border-radius: 60px 60px 60px 60px;
+    padding: 20px;
+    background-color: yellow;
+    position: relative;
+    animation: mymove 1s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes mymove {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 100px;
+    }
+}
+
+video,
+.imagensEstado>img,
+.carousel-item>img {
     margin: inherit;
     border: 1px solid;
     border-radius: 15px;
     overflow: hidden;
+}
+
+.carousel-caption {
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.carousel-caption>p {
+    text-align: center !important;
 }
 
 @media only screen and (min-width: 1400px) {}
