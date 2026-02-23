@@ -269,8 +269,11 @@ let coordenadas = [{
 ];
 
 window.onload = function gerarLocal() {
-    audio.volume = 0.1;
-    audio.play();
+    window.addEventListener('click', function () {
+        audio.volume = 0.1;
+        audio.play();
+    });
+
     if (verifyIfDesktop()) {
         noStateSelected.style.display = "block";
     }

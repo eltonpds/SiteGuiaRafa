@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   $('body').scrollspy({
     target: "#navbarScroll",
-    offset: 60
+    offset: 97
   });
 
   $("#navbarScroll a").on('click', function (event) {
@@ -14,15 +14,14 @@ $(document).ready(function () {
       var hash = this.hash;
 
       $('html, body').animate({
-        scrollTop: $(hash).offset().top - 54
+        scrollTop: $(hash).offset().top - 97
       }, 800);
       window.location.hash = hash;
     }
   });
 
   $('.tile').hide();
-  const isDesktop = verifyIfDesktop();
-  if (isDesktop) {
+  if (verifyIfDesktop()) {
     $(window).scroll(function () {
       $('.hideme').each(function (i) {
         var bottom_of_object = $(this).offset().top + $(this).outerHeight();
@@ -34,12 +33,12 @@ $(document).ready(function () {
         }
       });
     });
-  } else if (navigator.userAgent.match(/Windows/i) === null &&
-    navigator.userAgent.match(/Android/i) ||
-    navigator.userAgent.match(/Nexus/i)) {
+  } else {
     $('.hideme').fadeIn();
     loadMosaic();
   }
+
+  setTimeout(removeActiveLinkAndShowItems, 100);
 });
 
 function loadMosaic() {
@@ -56,11 +55,10 @@ function loadMosaic() {
 }
 
 function verifyIfDesktop() {
-  if (navigator.userAgent.match(/Windows/i) !== null &&
-    navigator.userAgent.match(/Android/i) === null)
-    return true;
-  else
+  if (navigator.userAgent.match(/Mobile|Windows Phone|Lumia|Android|webOS|iPhone|iPod|Blackberry|PlayBook|BB10|Opera Mini|\bCrMo\/|Opera Mobi/i))
     return false;
+  else
+    return true;
 }
 
 window.onscroll = function () {
@@ -69,9 +67,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if ($(window).scrollTop() > 400) {
-    $('#goToTop').show();
+    $('#goToTop').fadeIn(500);
   } else {
-    $('#goToTop').hide();
+    $('#goToTop').fadeOut(500);
   }
 }
 
@@ -82,3 +80,11 @@ $('#goToTop').click(function () {
     }, 800);
   });
 });
+
+function removeActiveLinkAndShowItems() {
+  $('.nav-link').each(function (i) {
+    $(this).removeClass('active');
+    $(this).fadeIn(500);
+
+  }).delay(200);
+}

@@ -55,7 +55,7 @@
 #seta-indicando-mapa {
     margin-top: 50px;
     rotate: 180deg;
-    width: 20%;
+    width: 15%;
     border: 2px solid black;
     border-radius: 60px 60px 60px 60px;
     padding: 20px;
@@ -92,9 +92,13 @@ video,
     text-align: center !important;
 }
 
-@media only screen and (min-width: 1400px) {}
+@media only screen and (min-width: 1367px) and (max-width: 3840px) {
+    #mapaBrasil {
+        width: 100% !important;
+    }
+}
 
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+@media only screen and (min-width: 1367px) and (max-width: 3840px) {
     #pinPA {
         top: 4.5rem;
         left: 22.5rem;
@@ -146,139 +150,172 @@ video,
     }
 }
 
-@media only screen and (min-width: 1120px) and (max-width: 1199px) {
+@media only screen and (min-width: 1200px) and (max-width: 1366px) {
     #pinPA {
-        top: 3.5rem;
-        left: 19rem;
+        top: 4.5rem;
+        left: 20rem;
     }
 
-    #pinPE {
-        top: 8.3rem;
-        left: 26rem;
-    }
-
-    #pinPB {
-        top: 7.2rem;
-        left: 28rem;
-    }
-
-    #pinAL {
-        top: 9.2rem;
-        left: 27.3rem;
+    #pinCE {
+        top: 6rem;
+        left: 27.5rem;
     }
 
     #pinRN {
-        top: 6.5rem;
-        left: 27rem;
+        top: 7rem;
+        left: 29rem;
+    }
+
+    #pinPB {
+        top: 8rem;
+        left: 30rem;
+    }
+
+    #pinPE {
+        top: 9rem;
+        left: 28.5rem;
+    }
+
+    #pinAL {
+        top: 10rem;
+        left: 29.5rem;
+    }
+
+    #pinBA {
+        top: 12.3rem;
+        left: 27.8rem;
     }
 
     #pinMG {
-        top: 17rem;
-        left: 22rem;
+        top: 17.5rem;
+        left: 24rem;
+    }
+
+    #pinRJ {
+        top: 20.3rem;
+        left: 24.5rem;
+    }
+
+    #pinRS {
+        top: 26rem;
+        left: 17rem;
+    }
+}
+
+@media only screen and (min-width: 1120px) and (max-width: 1199px) {
+    #pinPA {
+        top: 3rem;
+        left: 17rem;
     }
 
     #pinCE {
         top: 5rem;
-        left: 25.5rem;
+        left: 23rem;
+    }
+
+    #pinRN {
+        top: 5.5rem;
+        left: 24.2rem;
+    }
+
+    #pinPB {
+        top: 6.5rem;
+        left: 25rem;
+    }
+
+    #pinPE {
+        top: 7.5rem;
+        left: 23.5rem;
+    }
+
+    #pinAL {
+        top: 8.2rem;
+        left: 24.7rem;
     }
 
     #pinBA {
-        top: 11.3rem;
-        left: 25.8rem;
+        top: 10rem;
+        left: 23.2rem;
+    }
+
+    #pinMG {
+        top: 15rem;
+        left: 20rem;
     }
 
     #pinRJ {
-        top: 18.8rem;
-        left: 22.4rem;
+        top: 16.8rem;
+        left: 20.3rem;
     }
 
     #pinRS {
-        top: 25rem;
-        left: 16rem;
+        top: 22rem;
+        left: 14rem;
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1119px) {
     #pinPA {
-        top: 3.5rem;
-        left: 19rem;
-    }
-
-    #pinPE {
-        top: 8.6rem;
-        left: 26.5rem;
-    }
-
-    #pinPB {
-        top: 7.5rem;
-        left: 28rem;
-    }
-
-    #pinAL {
-        top: 9.3rem;
-        left: 27.6rem;
-    }
-
-    #pinRN {
-        top: 6.3rem;
-        left: 27.3rem;
-    }
-
-    #pinMG {
-        top: 17rem;
-        left: 22rem;
+        top: 3rem;
+        left: 16.7rem;
     }
 
     #pinCE {
         top: 5rem;
-        left: 25.5rem;
+        left: 23rem;
+    }
+
+    #pinRN {
+        top: 5.5rem;
+        left: 24.2rem;
+    }
+
+    #pinPB {
+        top: 6.5rem;
+        left: 25rem;
+    }
+
+    #pinPE {
+        top: 7.5rem;
+        left: 23.5rem;
+    }
+
+    #pinAL {
+        top: 8.2rem;
+        left: 24.7rem;
     }
 
     #pinBA {
-        top: 11.3rem;
-        left: 25.8rem;
+        top: 10rem;
+        left: 23.3rem;
+    }
+
+    #pinMG {
+        top: 15rem;
+        left: 20rem;
     }
 
     #pinRJ {
-        top: 18.8rem;
-        left: 22.4rem;
+        top: 16.8em;
+        left: 20.5rem;
     }
 
     #pinRS {
-        top: 25rem;
-        left: 16rem;
+        top: 22rem;
+        left: 14rem;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 991px) {
+    #mapaBrasil {
+        width: 100% !important;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     #pinPA {
-        top: 2rem;
+        top: 2.5rem;
         left: 14rem;
-    }
-
-    #pinPE {
-        top: 5.7rem;
-        left: 19rem;
-    }
-
-    #pinPB {
-        top: 5rem;
-        left: 20.5rem;
-    }
-
-    #pinAL {
-        top: 6.4rem;
-        left: 20.1rem;
-    }
-
-    #pinRN {
-        top: 4rem;
-        left: 19.6rem;
-    }
-
-    #pinMG {
-        top: 11.5rem;
-        left: 16rem;
     }
 
     #pinCE {
@@ -286,9 +323,34 @@ video,
         left: 18.5rem;
     }
 
+    #pinRN {
+        top: 4.2rem;
+        left: 19.5rem;
+    }
+
+    #pinPB {
+        top: 5rem;
+        left: 20.5rem;
+    }
+
+    #pinPE {
+        top: 5.7rem;
+        left: 19rem;
+    }
+
+    #pinAL {
+        top: 6.4rem;
+        left: 20.1rem;
+    }
+
     #pinBA {
         top: 7.8rem;
         left: 19rem;
+    }
+
+    #pinMG {
+        top: 11.5rem;
+        left: 16rem;
     }
 
     #pinRJ {
@@ -970,6 +1032,58 @@ video,
     #pinRJ {
         top: 19.2rem;
         left: 23.2rem;
+    }
+
+    #pinRS {
+        top: 26rem;
+        left: 16rem;
+    }
+}
+
+@media only screen and (min-width: 510px) and (max-width: 514px) {
+    #pinPA {
+        top: 4rem;
+        left: 20rem;
+    }
+
+    #pinCE {
+        top: 5rem;
+        left: 26.5rem;
+    }
+
+    #pinRN {
+        top: 6.5rem;
+        left: 28.5rem;
+    }
+
+    #pinPB {
+        top: 8rem;
+        left: 29rem;
+    }
+
+    #pinPE {
+        top: 9rem;
+        left: 27.5rem;
+    }
+
+    #pinAL {
+        top: 10rem;
+        left: 29rem;
+    }
+
+    #pinBA {
+        top: 12rem;
+        left: 27.5rem;
+    }
+
+    #pinMG {
+        top: 17rem;
+        left: 22.5rem;
+    }
+
+    #pinRJ {
+        top: 20rem;
+        left: 23.8rem;
     }
 
     #pinRS {

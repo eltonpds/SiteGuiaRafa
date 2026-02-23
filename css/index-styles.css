@@ -34,14 +34,14 @@ aside p {
 
 section,
 article,
-aside {
+aside,
+footer {
     border: azure;
     border-style: solid;
     border-width: 2px;
 }
 
-aside,
-p {
+aside>p {
     text-align: center;
 }
 
@@ -54,7 +54,7 @@ p {
     display: block;
 
     color: black;
-    text-shadow: 2px 2px azure;
+    text-shadow: 1px 1px azure;
 }
 
 #guia {
@@ -66,7 +66,19 @@ p {
     display: block;
 
     color: azure;
-    text-shadow: 0px 0px 10px black;
+    text-shadow: 1px 1px black;
+}
+
+#locaisVisitados {
+    background-image: url('../imagens/fundo/abstract-yellow-greeting-wall-texture.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: block;
+
+    color: azure;
+    text-shadow: 1px 1px black;
 }
 
 #corredora {
@@ -78,7 +90,7 @@ p {
     display: block;
 
     color: black;
-    text-shadow: 0px 0px 10px azure;
+    text-shadow: 1px 1px azure;
 }
 
 #artesa {
@@ -90,7 +102,7 @@ p {
     display: block;
 
     color: black;
-    text-shadow: 0px 0px 10px azure;
+    text-shadow: 1px 1px azure;
 }
 
 #contato,
@@ -104,6 +116,11 @@ footer {
 
     color: black;
     text-shadow: 0px 0px 10px azure;
+    border-top: none;
+}
+
+#contato {
+    border-bottom: none !important;
 }
 
 .hideme {
@@ -179,11 +196,11 @@ footer {
     background-image: url('../svg/app-back-to-top-arrow-3.svg');
     display: none;
     position: fixed;
-    margin-left: 70rem;
+    margin-left: 75rem;
     bottom: 50px;
     z-index: 9999;
     cursor: pointer;
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 30px;
     border-radius: 50%;
     background-color: yellow;
@@ -196,6 +213,78 @@ footer {
     transition: transform .7s ease;
 }
 
+@media only screen and (min-width: 2561px) and (max-width: 3840px) {
+    #goToTop {
+        margin-left: 200rem;
+    }
+
+    #goToTop {
+        padding: 70px;
+    }
+
+    #audio {
+        position: relative !important;
+        float: right !important;
+        top: 32rem;
+        right: 7rem;
+        opacity: 75%;
+    }
+}
+
+@media only screen and (min-width: 1921px) and (max-width: 2560px) {
+    #goToTop {
+        margin-left: 130rem;
+    }
+
+    #goToTop {
+        padding: 50px;
+    }
+
+    #audio {
+        position: relative !important;
+        float: right !important;
+        top: 32rem;
+        right: 7rem;
+        opacity: 75%;
+    }
+}
+
+@media only screen and (min-width: 1537px) and (max-width: 1920px) {
+    #goToTop {
+        margin-left: 100rem;
+    }
+
+    #goToTop {
+        padding: 50px;
+    }
+
+    #audio {
+        position: relative !important;
+        float: right !important;
+        top: 32rem;
+        right: 7rem;
+        opacity: 75%;
+    }
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 1536px) {
+    #goToTop {
+        margin-left: 75rem;
+    }
+
+    #goToTop {
+        padding: 45px;
+    }
+
+    #audio {
+        position: relative !important;
+        float: right !important;
+        top: 32rem;
+        right: 7rem;
+        opacity: 75%;
+    }
+}
+
 @media only screen and (max-width: 1400px) {
     .card-body {
         text-align: center !important;
@@ -206,7 +295,7 @@ footer {
     }
 
     #goToTop {
-        padding: 30px;
+        padding: 40px;
     }
 
     #audio {
