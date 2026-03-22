@@ -77,8 +77,8 @@ aside>p {
     background-position: center;
     display: block;
 
-    color: azure;
-    text-shadow: 1px 1px black;
+    color: black;
+    text-shadow: 1px 1px azure;
 }
 
 #corredora {
@@ -215,19 +215,11 @@ footer {
 
 @media only screen and (min-width: 2561px) and (max-width: 3840px) {
     #goToTop {
-        margin-left: 200rem;
+        margin-left: 130rem;
     }
 
     #goToTop {
         padding: 70px;
-    }
-
-    #audio {
-        position: relative !important;
-        float: right !important;
-        top: 32rem;
-        right: 7rem;
-        opacity: 75%;
     }
 }
 

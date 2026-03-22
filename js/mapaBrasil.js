@@ -12,7 +12,7 @@ let coordenadas = [{
             "urlFoto": "../videos/BelemPA.mp4",
             "fotoTitulo": "Belém",
             "fotoDescricao": "Capital",
-            "isVideo": 1,
+            "hasVideo": true,
             "width": 50
         }]
     },
@@ -24,7 +24,7 @@ let coordenadas = [{
             "urlFoto": "./imagens/ceara/biblioteca-ceara.jpeg",
             "fotoTitulo": "Biblioteca Estadual do Ceará",
             "fotoDescricao": "",
-            "isVideo": 0,
+            "hasVideo": false,
             "width": 50
         }]
     },
@@ -36,21 +36,21 @@ let coordenadas = [{
                 "urlFoto": "./imagens/rio-grande-norte/touros.jpeg",
                 "fotoTitulo": "Touros - RN",
                 "fotoDescricao": "BR 101 KM 0",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             },
             {
                 "urlFoto": "./imagens/rio-grande-norte/shui-brasil.jpeg",
                 "fotoTitulo": "Shui Brasil - RN",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             },
             {
                 "urlFoto": "./imagens/rio-grande-norte/shui-brasil2.jpeg",
                 "fotoTitulo": "Shui Brasil - RN",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             }
         ]
@@ -63,21 +63,21 @@ let coordenadas = [{
                 "urlFoto": "./imagens/paraiba/paraiba.jpeg",
                 "fotoTitulo": "João Pessoa - PB",
                 "fotoDescricao": "Capital",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             },
             {
                 "urlFoto": "./imagens/paraiba/restaurante-pb.jpeg",
                 "fotoTitulo": "Restaurante Fascino Medieval",
                 "fotoDescricao": "Manaíra - PB",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             },
             {
                 "urlFoto": "../videos/AreiaPB.mp4",
                 "fotoTitulo": "Areia",
                 "fotoDescricao": "Zona Rural",
-                "isVideo": 1,
+                "hasVideo": true,
                 "width": 50
             }
         ]
@@ -90,28 +90,28 @@ let coordenadas = [{
                 "urlFoto": "./imagens/pernambuco/recife.jpeg",
                 "fotoTitulo": "Recife",
                 "fotoDescricao": "Capital",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 100
             },
             {
                 "urlFoto": "./imagens/pernambuco/porto-galinhas.jpeg",
                 "fotoTitulo": "Porto de Galinhas - PE",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             },
             {
                 "urlFoto": "./imagens/pernambuco/garanhuns.jpeg",
                 "fotoTitulo": "Garanhuns - PE",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             },
             {
                 "urlFoto": "./imagens/pernambuco/buique.jpeg",
                 "fotoTitulo": "Garanhuns - PE",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             }
         ]
@@ -124,14 +124,14 @@ let coordenadas = [{
                 "urlFoto": "./imagens/alagoas/catamara-canyons-velho-chico.jpeg",
                 "fotoTitulo": "Canyons do Rio São Francisco",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             },
             {
                 "urlFoto": "./imagens/alagoas/gruta-talhado.jpeg",
                 "fotoTitulo": "Gruta do Talhado",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             }
         ]
@@ -144,7 +144,7 @@ let coordenadas = [{
                 "urlFoto": "./imagens/bahia/chapada-diamantina.jpeg",
                 "fotoTitulo": "Chapada Diamantina",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 100
             },
             {
@@ -152,21 +152,21 @@ let coordenadas = [{
                 "fotoTitulo": "Chapada Diamantina",
                 "fotoTitulo": "",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             },
             {
                 "urlFoto": "./imagens/bahia/salvador.jpeg",
                 "fotoTitulo": "Salvador",
                 "fotoDescricao": "Capital",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             },
             {
                 "urlFoto": "./imagens/bahia/salvador2.jpeg",
                 "fotoTitulo": "Salvador",
                 "fotoDescricao": "Capital",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 50
             }
         ]
@@ -179,21 +179,21 @@ let coordenadas = [{
                 "urlFoto": "./imagens/minas-gerais/igreja-catolica-bh.jpeg",
                 "fotoTitulo": "Igreja Católica de Ouro Preto",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 100
             },
             {
                 "urlFoto": "./imagens/minas-gerais/mina-bh.jpeg",
                 "fotoTitulo": "Mina de Ouro Santa Rita",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 75
             },
             {
                 "urlFoto": "./imagens/minas-gerais/predios-bh.jpeg",
                 "fotoTitulo": "Praça Raul Soares",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 75
             }
         ]
@@ -206,35 +206,35 @@ let coordenadas = [{
                 "urlFoto": "./imagens/rio-de-janeiro/cristo-redentor.jpeg",
                 "fotoTitulo": "Cristo Redentor",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 75
             },
             {
                 "urlFoto": "./imagens/rio-de-janeiro/forte-duque-caxias.jpeg",
                 "fotoTitulo": "Forte Duque de Caxias",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 75
             },
             {
                 "urlFoto": "./imagens/rio-de-janeiro/arcos-da-lapa.jpeg",
                 "fotoTitulo": "Arcos da Lapa",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 75
             },
             {
                 "urlFoto": "./imagens/rio-de-janeiro/pao-de-acucar.jpeg",
                 "fotoTitulo": "Pão de Açúcar",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 75
             },
             {
                 "urlFoto": "./imagens/rio-de-janeiro/pao-de-acucar2.jpeg",
                 "fotoTitulo": "Pão de Açúcar",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 75
             }
         ]
@@ -247,21 +247,21 @@ let coordenadas = [{
                 "urlFoto": "./imagens/rio-grande-sul/rio-grande-sul-campos.jpeg",
                 "fotoTitulo": "Farroupilha - RS",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 75
             },
             {
                 "urlFoto": "./imagens/rio-grande-sul/gramado-relogio.jpeg",
                 "fotoTitulo": "Gramado - RS",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 75
             },
             {
                 "urlFoto": "./imagens/rio-grande-sul/gramado-coracao.jpeg",
                 "fotoTitulo": "Gramado - RS",
                 "fotoDescricao": "",
-                "isVideo": 0,
+                "hasVideo": false,
                 "width": 75
             }
         ]
@@ -269,11 +269,6 @@ let coordenadas = [{
 ];
 
 window.onload = function gerarLocal() {
-    window.addEventListener('click', function () {
-        audio.volume = 0.1;
-        audio.play();
-    });
-
     if (verifyIfDesktop()) {
         noStateSelected.style.display = "block";
     }
@@ -339,20 +334,21 @@ function hiddeAll() {
 function isPlayingThanPause() {
     let videos = document.getElementsByTagName("video");
 
+    if (audio.paused === false)
+        audio.pause();
+
     for (var i in videos) {
         if (videos[i].paused === false) {
             videos[i].pause();
         }
     }
-
-    audio.play();
 }
 
 function isPausedThanPlay(video, state) {
     if (video.paused) {
         audio.pause();
-        video.play();
         video.volume = 0.1;
+        video.play();
     }
 }
 
@@ -379,6 +375,7 @@ function imagensEventListener(state, htmlEstado) {
 
         hiddeAll();
         isPlayingThanPause();
+        verifyAnyVideoInCarrocelToPlayMusic(state.url);
         deactivateAllActivePins();
 
         if (!verifyIfDesktop())
@@ -417,7 +414,7 @@ function mountCarousel(state, htmlEstado) {
 
     for (var i in state.url) {
         ilTemplate += '<li data-target="#carouselEstado' + state.sigla + '" data-slide-to="' + i + '"' + (i == 0 ? 'class="active"' : '') + '></li>';
-        if (state.url[i].isVideo === 0) {
+        if (state.url[i].hasVideo === false) {
             divImagem += '<div class="carousel-item' +
                 (i == 0 ? ' active' : '') + '" style="width: 100%"><img src="' + state.url[i].urlFoto + '" class="d-block w-' + state.url[i].width + ' mx-auto" alt="' + state.url[i].fotoTitulo + ' ' + state.url[i].fotoDescricao + '" />' +
                 '<div class="carousel-caption d-none d-md-block">' +
@@ -480,5 +477,19 @@ function verificarSeCaroucelTemVideoPlay(quantidadeItens, temVideo, state) {
             if (document.getElementById('3').classList.contains('active'))
                 isPlayingThanPause();
         });
+    }
+}
+
+function verifyAnyVideoInCarrocelToPlayMusic(conteudos) {
+    let contemVideo = false;
+    for (let index = 0; index < conteudos.length; index++) {
+        const element = conteudos[index];
+
+        if (element.hasVideo === true)
+            contemVideo = true;
+        else
+            setTimeout(() => {
+                audio.play()
+            }, 1500)
     }
 }
